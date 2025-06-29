@@ -39,5 +39,6 @@ for arg in "$@"; do
         --small) NUM_COMMITS=6 ;;
     esac
 done
+git config --global --add safe.directory "$eval_dir/inputs/chromium"
 $KOALA_SHELL "$git_script" "$NUM_COMMITS"
 echo $?
